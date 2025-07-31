@@ -1,0 +1,103 @@
+.message-input-container {
+  background: white;
+  border-top: 1px solid #e9ecef;
+  padding: 1rem;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.message-input-form {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.75rem;
+  background: #f8f9fa;
+  border-radius: 25px;
+  padding: 0.5rem;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.input-wrapper:focus-within {
+  border-color: #667eea;
+}
+
+.message-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  line-height: 1.4;
+  resize: none;
+  max-height: 120px;
+  min-height: 20px;
+  font-family: inherit;
+  color: #333;
+}
+
+.message-input::placeholder {
+  color: #6c757d;
+}
+
+.send-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.send-button:hover:not(:disabled) {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.send-button:active:not(:disabled) {
+  transform: scale(0.95);
+}
+
+.send-button:disabled {
+  background: #dee2e6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.send-button svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Auto-resize textarea handled in component */
+
+@media (max-width: 768px) {
+  .message-input-container {
+    padding: 0.75rem;
+  }
+  
+  .input-wrapper {
+    padding: 0.4rem;
+  }
+  
+  .message-input {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.95rem;
+  }
+  
+  .send-button {
+    width: 40px;
+    height: 40px;
+  }
+}
